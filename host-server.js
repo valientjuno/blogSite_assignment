@@ -2,7 +2,10 @@ require("dotenv").config();
 
 const expressLayouts = require("express-ejs-layouts");
 const express = require("express");
-const app = express();
+const cookieParser = require("cookie-parser");
+const methodOverride = require("method-override");
+
+const app = express(); // ✅ Define app BEFORE using it
 const PORT = 4000;
 
 const connectDB = require("./server/config/db");
@@ -10,6 +13,8 @@ connectDB();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cookieParser());
+app.use(methodOverride("_method"));
 
 app.use(expressLayouts);
 app.use(express.static("public"));

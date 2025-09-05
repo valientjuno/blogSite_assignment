@@ -2,10 +2,10 @@
   "name": "node_blogsite_assignment",
   "version": "1.0.0",
   "description": "section 4 lesson 1",
-  "main": "app.js",
+  "main": "host-server.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js",
+    "dev": "nodemon host-server.js",
+    "start": "node host-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -26,6 +26,16 @@
     "express-session": "^1.18.2",
     "jsonwebtoken": "^9.0.2",
     "method-override": "^3.0.0",
-    "mongoose": "^8.18.0"
-  }
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0",
+    "node.js": "^0.0.1-security"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valientjuno/node_blogSite_assignment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/valientjuno/node_blogSite_assignment/issues"
+  },
+  "homepage": "https://github.com/valientjuno/node_blogSite_assignment#readme"
 }
