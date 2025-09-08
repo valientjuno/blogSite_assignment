@@ -3,7 +3,7 @@
   <p class="author_body">Web Developer and Student</p>
 </div>
 
-<img src="./img/apple.jpeg" alt="apple" />
+<img src="./img/codingtree2.webp" alt="apple" />
 
 <section class="articles">
   <h2 class="articles_heading">Latest Posts</h2>
@@ -13,13 +13,13 @@
     <% data.forEach(post => { %>
     <li>
       <a href="/post/<%= post._id %>">
-        <span><%- post.title %></span>
-        <span class="article-list_date">
-          <% post.createdAt.todDateString() %>
-        </span>
+        <span><%-post.title %></span>
+        <span class="article-list__date">
+          <%= post.createdAt.toDateString() %> %></span
+        >
       </a>
     </li>
-    <%});%>
+    <% }) %>
   </ul>
 
   <a href="#" class="pagination"> &lt; View Older Posts </a>
