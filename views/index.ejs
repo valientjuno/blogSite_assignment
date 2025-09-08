@@ -3,7 +3,7 @@
   <p class="author_body">Web Developer and Student</p>
 </div>
 
-<img src="./img/codingtree2.webp" alt="apple" />
+<img src="../public/img/codingtree2.webp" alt="apple" />
 
 <section class="articles">
   <h2 class="articles_heading">Latest Posts</h2>
@@ -22,5 +22,9 @@
     <% }) %>
   </ul>
 
-  <a href="#" class="pagination"> &lt; View Older Posts </a>
+  <% if(nextPage !== null) { %>
+  <a href="/?page=<%= nextPage %>" class="pagination">
+    &lt; View Older Posts
+  </a>
+  <% } %>
 </section>
