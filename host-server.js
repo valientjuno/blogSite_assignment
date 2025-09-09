@@ -5,7 +5,7 @@ const express = require("express");
 const cookieParser = require("cookie-parser");
 const methodOverride = require("method-override");
 
-const app = express(); // ✅ Define app BEFORE using it
+const app = express();
 const PORT = 4000;
 
 const connectDB = require("./server/config/db");
