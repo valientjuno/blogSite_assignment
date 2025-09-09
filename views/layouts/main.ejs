@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=locals.title %></title>
-    <meta name="description" content="<%=locals.description %>" />
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>" />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <%-include("../partials/search.ejs")%>
-    <!-- When including ejs tag use a dash instead of equals -->
+    <!-- Search Bar -->
+    <%- include("../partials/search.ejs") %>
+
     <div class="container">
-      <%-include("../partials/header.ejs")%>
+      <!-- Header / Navbar -->
+      <%- include("../partials/header.ejs") %>
+
+      <!-- Main Content -->
       <main class="main"><%- body %></main>
-      <%-include("../partials/footer.ejs")%>
+
+      <!-- Footer -->
+      <%- include("../partials/footer.ejs") %>
     </div>
 
-    <script type="text/javascript " defer src="/js/script.js"></script>
+    <script type="text/javascript" defer src="/js/script.js"></script>
   </body>
 </html>

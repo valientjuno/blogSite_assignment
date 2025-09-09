@@ -1,30 +1,37 @@
 <div class="author">
-  <h1 class="author_heading">Hello, I'm Developer.</h1>
+  <h1 class="author_heading">Hello, I'm Jesse.</h1>
   <p class="author_body">Web Developer and Student</p>
 </div>
 
-<img src="../public/img/codingtree2.webp" alt="apple" />
-
+<img src="../public/img/note.jpg" alt="note">
 <section class="articles">
   <h2 class="articles_heading">Latest Posts</h2>
 
-  <!-- Dummy data displayed unit-->
   <ul class="article-ul">
     <% data.forEach(post => { %>
     <li>
       <a href="/post/<%= post._id %>">
-        <span><%-post.title %></span>
+        <span><%- post.title %></span>
         <span class="article-list__date">
-          <%= post.createdAt.toDateString() %> %></span
-        >
+          <%= post.createdAt.toDateString() %>
+        </span>
       </a>
     </li>
     <% }) %>
   </ul>
 
-  <% if(nextPage !== null) { %>
-  <a href="/?page=<%= nextPage %>" class="pagination">
-    &lt; View Older Posts
-  </a>
+  <!-- Pagination -->
+  <% if (nextPage !== null) { %>
+  <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
   <% } %>
+
+  <!-- if prevPage is 1 then go to / -->
+  <% if (prevPage >= 1) { %> <% if (prevPage === 1) { %>
+  <a href="/" class="pagination-newer">View Newer Posts &gt;</a>
+  <% } else { %>
+  <a href="/?page=<%= prevPage %>" class="pagination-newer"
+    >View Newer Posts &gt;</a
+  >
+  <% } %> <% } %>
+  </div>
 </section>
